@@ -2,7 +2,8 @@
     <h3> Our To-Do List</h3>
     <ul *ngFor="let task of tasks">
         <li>
-            {{task.name}}
+            {{task.name}} 
+            <app-task-detail [task]="task" ></app-task-detail>
         </li>
     </ul>
     <p *ngIf="tasks.length>4"> Your tasks are many </p>
